@@ -1,6 +1,7 @@
 import numpy as np
 from events import Events
 
+
 class RceNeuron:
     def __init__(self, coordinates):
         self.radius = 3
@@ -16,6 +17,7 @@ class RceNeuralNetwork:
 
         # events initialization
         self.create_neuron_event = Events()
+        self.shrink_neuron_radius = Events()
 
         # alg initialization
         self.neurons = []
@@ -23,4 +25,4 @@ class RceNeuralNetwork:
     def start(self):
         for coordinates, expected in zip(self.points, self.expected_values):
             neuron = RceNeuron(coordinates)
-            self.create_neuron_event.on_change(neuron)
+            self.create_neuron_event.on_change(neuron, expected)

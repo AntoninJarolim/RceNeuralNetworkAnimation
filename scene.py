@@ -1,14 +1,12 @@
 from manim import *
 import rce_lib as rce
 import json
+import pandas as pd
+
 
 def get_data():
     with open('data.json') as f:
         return json.load(f)
-
-def something_changed(reason):
-    print("prdeeeeeeeeel")
-
 
 def get_neuron_color(expected):
     colors = [BLACK, RED, BLUE]
@@ -20,7 +18,7 @@ class RceNetworkCreation(Scene):
         super().__init__()
         self.axes = Axes(x_range=[-3, 8], y_range=[-2, 4], x_length=11, y_length=6).add_coordinates()
         self.origin = self.axes.get_origin()
-        self.neuron_dots = []
+        self.neuron_radiuses = pd.DataFrame(columns=['x', 'y', 'radius'])
 
         # circ = Circle(radius=0.5).move_to([-4, -1.5, 0])
 
@@ -49,19 +47,22 @@ class RceNetworkCreation(Scene):
     def add_neuron(self, neuron, expected):
         neuron_color = get_neuron_color(expected)
         # Get poit according to axes coordination
-        point = self.axes.coords_to_point(neuron.coordinates[0], neuron.coordinates[1])
+        point = self.axes.coords_to_point(neuron.x, neuron.y)
 
         # Add point representing middle of a neuron
         dot_point = Dot(point=point, radius=0.12, color=neuron_color)
         self.add(dot_point)
 
         # Add radius around a neuron
-        neuron_dot = Dot(point=point, radius=neuron.radius, stroke_width=1.3, color=neuron_color)
-        self.neuron_dots.append(neuron_dot)
-        neuron_dot.set_fill(neuron_color, opacity=0.08)  # set the color and transparency
-        self.add(neuron_dot)  # show the circle on screen
+        neuron_radius = Dot(point=point, radius=neuron.radius, stroke_width=1.3, color=neuron_color,
+                            fill_color=neuron_color, fill_opacity=0.08)
+        neuron_record = {'x': neuron.x, 'y': neuron.y, 'radius': neuron_radius}
+        self.neuron_radiuses.loc[len(self.neuron_radiuses)] = neuron_record
+        # neuron_radius.set_fill(neuron_color, opacity=0.08)  # set the color and transparency
+        self.add(neuron_radius)  # show the circle on screen
 
-    def shrink_neuron_radius(self):
+    def shrink_neuron_radius(self, neuron, expected):
+
         pass
 
 

@@ -1,0 +1,18 @@
+[
+    {
+        "coordinates": [2, 0, 0],
+        "expected": 1
+    },
+    {
+        "coordinates": [0, 1, 0],
+        "expected": 2
+    },
+    {
+        "coordinates": [2, 1, 0],
+        "expected": 1
+    },
+    {
+        "coordinates": [0, 3, 0],
+        "expected": 2
+    }
+]

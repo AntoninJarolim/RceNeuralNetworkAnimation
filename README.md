@@ -4,7 +4,10 @@ Implementation of the [Radial basic funcition network](https://en.wikipedia.org/
 Network learning visualization:
 
 
-https://github.com/AntoninJarolim/RceNeuralNetworkAnimation/assets/60815963/9e696a95-4e3a-4f04-ba74-a4d8ea29476a
+
+https://github.com/AntoninJarolim/RceNeuralNetworkAnimation/assets/60815963/aeefa10b-86a2-4eed-beef-ee272f82fa77
+
+
 
 
 See other videos in [/media/videos](https://github.com/AntoninJarolim/RceNeuralNetworkAnimation/tree/a3d9e42d02f86d2f04eb041a1d216cee7821f346/media/videos/scene/1080p60) folder.

@@ -7,4 +7,4 @@ Network learning visualization:
 https://github.com/AntoninJarolim/RceNeuralNetworkAnimation/assets/60815963/9e696a95-4e3a-4f04-ba74-a4d8ea29476a
 
 
-See other videos in /media/videos folder.
+See other videos in [/media/videos](https://github.com/AntoninJarolim/RceNeuralNetworkAnimation/tree/a3d9e42d02f86d2f04eb041a1d216cee7821f346/media/videos/scene/1080p60) folder.

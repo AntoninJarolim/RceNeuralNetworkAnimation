@@ -1,0 +1,78 @@
+[
+    {
+        "coordinates": [-2.21, 1.541],
+        "expected": 1
+    },
+    {
+        "coordinates": [0.12, 1],
+        "expected": 2
+    },
+    {
+        "coordinates": [1.854, 1.1815],
+        "expected": 2
+    },
+    {
+        "coordinates": [2.121, 1.5121],
+        "expected": 1
+    },
+    {
+        "coordinates": [3.22, 1.12],
+        "expected": 1
+    },
+    {
+        "coordinates": [3.84, 0.174],
+        "expected": 1
+    },
+    {
+        "coordinates": [5.21, 0.1],
+        "expected": 1
+    },
+    {
+        "coordinates": [6.51, 2.1012],
+        "expected": 1
+    },
+    {
+        "coordinates": [-2.121, 2.234],
+        "expected": 1
+    },
+    {
+        "coordinates": [-1.620, 3.6151],
+        "expected": 2
+    },
+    {
+        "coordinates": [0.541, 3.124],
+        "expected": 2
+    },
+    {
+        "coordinates": [1.12, 2.2848],
+        "expected": 2
+    },
+    {
+        "coordinates": [2.12, 3.854],
+        "expected": 2
+    },
+    {
+        "coordinates": [3.165, 3.894],
+        "expected": 1
+    },
+    {
+        "coordinates": [3.212, 2.156],
+        "expected": 1
+    },
+    {
+        "coordinates": [2.846, -1.54],
+        "expected": 1
+    },
+    {
+        "coordinates": [-1.41, -2.5141],
+        "expected": 3
+    },
+    {
+        "coordinates": [-0.45, -3.9141],
+        "expected": 3
+    },
+    {
+        "coordinates": [-1.91, -1.15641],
+        "expected": 3
+    }
+]

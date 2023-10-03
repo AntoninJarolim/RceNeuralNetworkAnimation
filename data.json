@@ -1,18 +1,14 @@
 [
     {
-        "coordinates": [0, 2],
+        "coordinates": [0, 1],
         "expected": 1
     },
     {
-        "coordinates": [1, 0],
-        "expected": 2
+        "coordinates": [2.8, 1],
+        "expected": 3
     },
     {
-        "coordinates": [1, 2],
-        "expected": 1
-    },
-    {
-        "coordinates": [3, 0],
+        "coordinates": [1.4, 1],
         "expected": 2
     }
 ]

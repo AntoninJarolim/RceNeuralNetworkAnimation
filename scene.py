@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def get_data():
-    with open('data2.json') as f:
+    with open('data/data2.json') as f:
         return json.load(f)
 
 

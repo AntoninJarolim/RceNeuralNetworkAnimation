@@ -128,38 +128,3 @@ class RceNetworkCreation(Scene):
 if __name__ == "__main__":
     animation = RceNetworkCreation()
     animation.construct()
-
-    neuron_radiuses = pd.DataFrame(columns=['x', 'y', 'neuron', 'neuron_radius'])
-
-    neuron_dot = Dot(point=LEFT, radius=3)
-    neuron_record = {'x': 0, 'y': 0, 'neuron': neuron_dot, 'neuron_radius': 3}
-
-
-
-    row = neuron_radiuses[
-        (neuron_radiuses['x'] == 0) &
-        (neuron_radiuses['y'] == 0)
-        ]
-    neuron_dot = row.squeeze()
-
-    new_neuron_dot = Dot(point=RIGHT, radius=1.5)
-
-    # Replace old neuron
-    neuron_as_series = pd.Series(new_neuron_dot)
-    neuron_radiuses.loc[
-        (neuron_radiuses['x'] == 0) &
-        (neuron_radiuses['y'] == 0)
-        , 'neuron'] = pd.Series(new_neuron_dot)
-
-                            # {'neuron': new_neuron_dot},
-                            # inplace=True)
-
-    row2 = neuron_radiuses[
-        (neuron_radiuses['x'] == 0) &
-        (neuron_radiuses['y'] == 0)
-        ]
-    neuron_dot = row2.squeeze()
-    new_radius = neuron_dot['neuron'].radius / 2
-    pass
-
-
